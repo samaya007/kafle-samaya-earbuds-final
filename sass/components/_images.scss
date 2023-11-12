@@ -1,0 +1,47 @@
+
+  
+  img.hero-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  img.introduction-image {
+    max-width: 100%;
+    height: auto;
+
+  }
+
+img.fade {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4%;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+
+
+
+
+  img.three-earbuds {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+  }
+
+
+  .round-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2%;
+    filter: brightness(0.6); /* Darken the initial image */
+    transition: all 0.3s ease;
+  }
+  
+  .round-image:hover {
+    filter: brightness(1); 
+  }
+  

@@ -1,0 +1,42 @@
+
+
+.buy-button{
+    background-color: brown;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+    transition: transform 0.3s ease;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 50px;
+  }
+  .buy-button:hover {
+    background-color: #1cbcbf;
+    color: white;
+  }
+  .buy-button:hover {
+    transform: scale(1.1);
+  }
+
+  a.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #3498db;
+    border-radius: 25px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  a.buy-button:hover {
+    background-color: #207ac1;
+    border-color: #207ac1;
+  
+  }

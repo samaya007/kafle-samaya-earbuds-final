@@ -1,7 +1,5 @@
 The last commit was done at 11:58 but was only able to merge at 12:01 so it shows latest merged on Nov 13, I kindly request you to please omit the 1 minute late commit
 
-<img width="918" alt="image" src="https://github.com/samaya007/kafle-samaya-earbuds-final/assets/121986334/e1a2e3bc-52a1-4a4f-81ed-ddb102f63081">
-
 
 ## Earbuds
 This is the final project for earbuds part 2 landing page. here you can find the live ar animation aling with x ray build to see the internal parts. You can view the scroll animation for earbuds and can see three different color design. 

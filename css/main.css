@@ -50,13 +50,11 @@ ul.bullet-list-v2 li:nth-last-child(-n+1) {
       background-position: -100%;
  }
 }
-/* Add this CSS for initial state */
 .infotext {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s, transform 0.5s;
 }
-/* Add this CSS to apply styles when the element is in view */
 .infotext.show {
   opacity: 1;
   transform: translateY(0);
@@ -303,7 +301,6 @@ img.three-earbuds {
   height: auto;
   border-radius: 2%;
   filter: brightness(0.6);
- /* Darken the initial image */
   transition: all 0.3s ease;
 }
 .round-image:hover {
@@ -522,7 +519,6 @@ model-viewer > #ar-prompt > img {
  }
   .slideImage {
       position: absolute;
-     /*images are stacked in order via absolute*/
       left: 0;
       right: 0;
       height: 90vh;
@@ -534,15 +530,12 @@ model-viewer > #ar-prompt > img {
   .image-left {
       background: url(../images/720.png) no-repeat;
       width: 10%;
-     /*start the image at the halfway point*/
       background-size: cover;
  }
   .image-drag {
       background-color: #00249c;
       left: 50%;
-     /*match up with image left*/
       width: 8px;
-     /*orig 49*/
       cursor: pointer;
  }
 }

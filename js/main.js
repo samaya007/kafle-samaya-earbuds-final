@@ -5,7 +5,7 @@
   const images = [];
   let isMobile = false;
 
-  // Check if the user is on a mobile device
+  // to chekk the user is on a mobile device
   if (/Mobi|Android/i.test(navigator.userAgent)) {
       isMobile = true;
   }
@@ -52,10 +52,6 @@
       }
   });
 })();
-
-
-
-
 (() => {
   console.log("IIFE Fired");
   const model = document.querySelector("#model");
@@ -64,6 +60,7 @@
   const InfoBoxes = [{
           title: "Touch sensitive controls",
           text: "touch to control play, pause, stop and skip",
+          image: "images/controls.png"
       },
       {
           title: "+24 hrs battery backup",
@@ -82,6 +79,7 @@
       {
           title: "Earpiece",
           text: "confort fit for every ear type",
+          images: "images/eartips.png"
       },
   ];
 
@@ -101,22 +99,12 @@
               titleElement.style.color = "#9cacac";
               titleElement.style.fontSize = "20px";
               titleElement.style.fontSize = "20px";
-              // titleElement.style.fontFamily = "FontFamily"; 
-
-
-
               const textElement = document.createElement("p");
               textElement.textContent = infoBox.text;
-
               textElement.style.color = "#161616";
-
               textElement.style.fontSize = "16px";
-
               selected.appendChild(titleElement);
               selected.appendChild(textElement);
-
-
-
               /*this chunk of code is AI generated. Encounterd bugs while adding images to the info box*/
               if (infoBox.image) {
                   const imgElement = document.createElement("images");
@@ -124,19 +112,12 @@
                   imgElement.classList.add("hotspot-image");
                   selected.appendChild(imgElement);
               }
-
-
-
-
           } else {
               console.log(`#hotspot-${index + 1} not found`);
           }
       });
   }
-
-
   loadInfo();
-
   function showInfo() {
       let selected = document.querySelector(`#${this.slot}`);
       gsap.to(selected, {
@@ -154,29 +135,18 @@
           visibility: "hidden"
       });
   }
-
-
-  // event listeners
   model.addEventListener("load", modelLoaded);
 
   hotspots.forEach(function(hotspot) {
       hotspot.addEventListener("mouseover", showInfo);
       hotspot.addEventListener("mouseout", hideInfo);
-
-
   });
 })();
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
   const elements = document.querySelectorAll('.promo .fade');
-
   function checkVisibility() {
       elements.forEach(element => {
           const elementPosition = element.getBoundingClientRect();
-
-          // Check if the element is in the viewport
           if (elementPosition.top < window.innerHeight && elementPosition.bottom >= 0) {
               element.style.opacity = 1;
           } else {
@@ -184,16 +154,9 @@ document.addEventListener('DOMContentLoaded', function() {
           }
       });
   }
-
-  // Initial check
   checkVisibility();
-
-  // Listen for scroll events
   window.addEventListener('scroll', checkVisibility);
 });
-
-
-// Add this JavaScript to handle the scroll and apply the class dynamically
 document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("scroll", function() {
       const infotext = document.querySelector(".infotext");
@@ -201,9 +164,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const infotextHeight = infotext.clientHeight;
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
-
-      // Check if the infotext section is in the viewport
-      if (
+            if (
           scrollPosition > infotextOffset - windowHeight + infotextHeight * 0.5 &&
           scrollPosition < infotextOffset + infotextHeight - infotextHeight * 0.5
       ) {
@@ -213,37 +174,26 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 });
-
-
-
-
 (() => {
   (function() {
       "use strict";
-
-
-      var imageCon = document.querySelector('#imageCon'),
+       var imageCon = document.querySelector('#imageCon'),
           drag = document.querySelector('.image-drag'),
           left = document.querySelector('.image-left'),
           dragging = false,
           min = 0,
           max = imageCon.offsetWidth;
-
       function onDown() {
           dragging = true;
       }
-
       function onUp() {
           dragging = false;
       }
-
       function onMove(event) {
           if (dragging === true) {
               var x = event.clientX - imageCon.getBoundingClientRect().left;
-              
               console.log(event.clientX);
               console.log(imageCon.getBoundingClientRect().left);
-              
               if (x < min) { 
                   x = min; 
               } else if (x > max) { 
@@ -261,3 +211,5 @@ document.addEventListener("DOMContentLoaded", function() {
   })();
 
 })();
+
+

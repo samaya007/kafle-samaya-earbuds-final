@@ -174,10 +174,13 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 });
+
+
+
 (() => {
   (function() {
-      "use strict";
-       var imageCon = document.querySelector('#imageCon'),
+
+    let imageCon = document.querySelector('#imageCon'),
           drag = document.querySelector('.image-drag'),
           left = document.querySelector('.image-left'),
           dragging = false,
@@ -191,9 +194,14 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       function onMove(event) {
           if (dragging === true) {
-              var x = event.clientX - imageCon.getBoundingClientRect().left;
-              console.log(event.clientX);
-              console.log(imageCon.getBoundingClientRect().left);
+
+              let x = event.clientX - imageCon.getBoundingClientRect().left;
+
+            //  console.log(event.clientX);
+            //  console.log(imageCon.getBoundingClientRect().left);
+
+
+
               if (x < min) { 
                   x = min; 
               } else if (x > max) { 

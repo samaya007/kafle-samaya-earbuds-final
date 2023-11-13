@@ -1,3 +1,4 @@
+<img width="918" alt="image" src="https://github.com/samaya007/kafle-samaya-earbuds-final/assets/121986334/e1a2e3bc-52a1-4a4f-81ed-ddb102f63081">
 
 
 ## Eatbuds

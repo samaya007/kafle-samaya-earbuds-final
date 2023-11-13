@@ -54,6 +54,9 @@ a.active, a:hover {
 #check {
   display: none;
 }
+
+
+
 @media (max-width: 952px) {
   label.logo {
       font-size: 30px;
@@ -93,4 +96,26 @@ background: #141516;
   #check:checked ~ ul {
       left: 0;
  }
+}
+
+
+//scrolling
+
+.top {
+  --offset: 50px; 
+  
+  position: sticky;
+  bottom: 20px;      
+  margin-right:10px; 
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+  
+  /* visual styling */
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  color: #fff;
+  background: #000;
+  border-radius: 100px;
+  white-space: nowrap;
 }

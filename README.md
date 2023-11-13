@@ -1,7 +1,7 @@
 <img width="918" alt="image" src="https://github.com/samaya007/kafle-samaya-earbuds-final/assets/121986334/e1a2e3bc-52a1-4a4f-81ed-ddb102f63081">
 
 
-## Eatbuds
+## Earbuds
 This is the final project for earbuds part 2 landing page. here you can find the live ar animation aling with x ray build to see the internal parts. You can view the scroll animation for earbuds and can see three different color design. 
 
 ## Installation

@@ -560,47 +560,62 @@ model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
 }
 
-#outerShell {
+
+#mobile-xray img {
   display: none;
 }
+
+/* Media query for mobile and tablet screens */
+@media only screen and (max-width: 768px) {
+  #mobile-xray img {
+    display: block;
+  }
+}
+
+
+
 
 @media screen and (min-width: 1200px) {
   #mobile-tablet-view {
     display: none;
   }
+
+
+
   #outerShell {
     display: block;
     max-width: 1200px;
-    margin: auto;
     border: solid 2px #406995;
   }
   #imageCon {
     position: relative;
-    max-width: 1200px;
-    height: 90vh;
+    max-width: 1280px;
+    height: 720px;
   }
   .slideImage {
     position: absolute; /*images are stacked in order via absolute*/
     left: 0;
     right: 0;
-    height: 90vh;
+    height: 100%;
   }
   .image-right {
     background: url(../images/original-xray.png) no-repeat;
-    background-size: cover;
+    background-size: 1080px;
   }
   .image-left {
     background: url(../images/xray.png) no-repeat;
     width: 10%; /*start the image at the halfway point*/
-    background-size: cover;
+    background-size: 1080px;
   }
   .image-drag {
     background-color: #00249c;
     left: 50%; /*match up with image left*/
-    width: 8px; /*orig 49*/
+    width: 8px; 
     cursor: pointer;
   }
 } 
+
+
 html {
   height: 100%;
   scroll-behavior: smooth;

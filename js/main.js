@@ -7,11 +7,11 @@
 
   // Check if the user is on a mobile device
   if (/Mobi|Android/i.test(navigator.userAgent)) {
-    isMobile = true;
+      isMobile = true;
   }
 
   const buds = {
-    frame: 0,
+      frame: 0,
   };
 
   // Adjust canvas size for mobile
@@ -19,37 +19,37 @@
   canvas.height = isMobile ? window.innerHeight : 1080;
 
   for (let i = 0; i < frameCount; i++) {
-    const img = new Image();
-    img.src = `images/animation_${(i + 1000).toString().padStart(4, "0")}.jpg`;
-    images.push(img);
+      const img = new Image();
+      img.src = `images/animation_${(i + 1000).toString().padStart(4, "0")}.jpg`;
+      images.push(img);
   }
 
   gsap.to(buds, {
-    frame: 139,
-    snap: "frame",
-    scrollTrigger: {
-      trigger: "#explode-view",
-      pin: true,
-      scrub: 1,
-      start: "top top",
-    },
-    onUpdate: render,
+      frame: 139,
+      snap: "frame",
+      scrollTrigger: {
+          trigger: "#explode-view",
+          pin: true,
+          scrub: 1,
+          start: "top top",
+      },
+      onUpdate: render,
   });
 
   images[0].onload = render;
 
   function render() {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.drawImage(images[buds.frame], 0, 0, canvas.width, canvas.height);
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.drawImage(images[buds.frame], 0, 0, canvas.width, canvas.height);
   }
 
   // Update canvas size on window resize (for mobile responsiveness)
   window.addEventListener("resize", () => {
-    if (isMobile) {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      render();
-    }
+      if (isMobile) {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+          render();
+      }
   });
 })();
 
@@ -99,25 +99,25 @@
               const titleElement = document.createElement("h2");
               titleElement.textContent = infoBox.title;
               titleElement.style.color = "#9cacac";
-              titleElement.style.fontSize = "20px"; 
-      titleElement.style.fontSize = "20px"; 
-      // titleElement.style.fontFamily = "FontFamily"; 
+              titleElement.style.fontSize = "20px";
+              titleElement.style.fontSize = "20px";
+              // titleElement.style.fontFamily = "FontFamily"; 
 
 
-      
+
               const textElement = document.createElement("p");
               textElement.textContent = infoBox.text;
 
               textElement.style.color = "#161616";
 
- textElement.style.fontSize = "16px"; 
+              textElement.style.fontSize = "16px";
 
               selected.appendChild(titleElement);
               selected.appendChild(textElement);
 
 
 
-/*this chunk of code is AI generated. Encounterd bugs while adding images to the info box*/
+              /*this chunk of code is AI generated. Encounterd bugs while adding images to the info box*/
               if (infoBox.image) {
                   const imgElement = document.createElement("images");
                   imgElement.src = infoBox.image;
@@ -169,20 +169,20 @@
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   const elements = document.querySelectorAll('.promo .fade');
 
   function checkVisibility() {
-    elements.forEach(element => {
-      const elementPosition = element.getBoundingClientRect();
+      elements.forEach(element => {
+          const elementPosition = element.getBoundingClientRect();
 
-      // Check if the element is in the viewport
-      if (elementPosition.top < window.innerHeight && elementPosition.bottom >= 0) {
-        element.style.opacity = 1;
-      } else {
-        element.style.opacity = 0;
-      }
-    });
+          // Check if the element is in the viewport
+          if (elementPosition.top < window.innerHeight && elementPosition.bottom >= 0) {
+              element.style.opacity = 1;
+          } else {
+              element.style.opacity = 0;
+          }
+      });
   }
 
   // Initial check
@@ -194,104 +194,70 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Add this JavaScript to handle the scroll and apply the class dynamically
-document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("scroll", function () {
-    const infotext = document.querySelector(".infotext");
-    const infotextOffset = infotext.offsetTop;
-    const infotextHeight = infotext.clientHeight;
-    const scrollPosition = window.scrollY;
-    const windowHeight = window.innerHeight;
+document.addEventListener("DOMContentLoaded", function() {
+  window.addEventListener("scroll", function() {
+      const infotext = document.querySelector(".infotext");
+      const infotextOffset = infotext.offsetTop;
+      const infotextHeight = infotext.clientHeight;
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
 
-    // Check if the infotext section is in the viewport
-    if (
-      scrollPosition > infotextOffset - windowHeight + infotextHeight * 0.5 &&
-      scrollPosition < infotextOffset + infotextHeight - infotextHeight * 0.5
-    ) {
-      infotext.classList.add("show");
-    } else {
-      infotext.classList.remove("show");
-    }
+      // Check if the infotext section is in the viewport
+      if (
+          scrollPosition > infotextOffset - windowHeight + infotextHeight * 0.5 &&
+          scrollPosition < infotextOffset + infotextHeight - infotextHeight * 0.5
+      ) {
+          infotext.classList.add("show");
+      } else {
+          infotext.classList.remove("show");
+      }
   });
 });
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 (() => {
-  (function(){
+  (function() {
       "use strict";
-  
-  
-  var imageCon = document.querySelector('#imageCon'),
-      drag = document.querySelector('.image-drag'),
-      left = document.querySelector('.image-left'),
-      dragging = false,
-      min = 0,
-      max = imageCon.offsetWidth;
-      //The HTMLElement.offsetWidth read-only property returns the layout width of an element. 
-  
-  function onDown() {
-    dragging = true;
-  }
-  
-  function onUp() {
-    dragging = false;
-  }
-  
-  function onMove(event) {
-    if(dragging===true) {
-      var x = event.clientX - imageCon.getBoundingClientRect().left;
-      //The MouseEvent.clientX read-only property provides the horizontal coordinate within the application's client area at which the event occurred
-      //The Element.getBoundingClientRect() method returns the size of an element and its position relative to the viewport.
-      //X-coordinate, relative to the viewport origin, of the left of the rectangle box. Read only
-      console.log(event.clientX);
-      console.log(imageCon.getBoundingClientRect().left);
-    //need logic to keep slider in box
-      if(x < min) { //if x less than 0
-        x = min;    //set x = 0
-      }
-     else if(x > max) { //otherwise if x is greater than 900
-        x = max-4; //set x to equal the max width minus 2 (width of slider)
-      }
-      drag.style.left = x + 'px';
-      left.style.width = x + 'px';
-    }
-  }
-  
-  drag.addEventListener('mousedown', onDown, false); 
-  //add listener to actual drag div, if user clicks on it
-  //drag.addEventListener('touchstart', onDown);
-  document.body.addEventListener('mouseup', onUp, false);
-  //document.body.addEventListener('mo', onUp);
-  document.body.addEventListener('mousemove', onMove, false);
-  //document.body.addEventListener('touchmove', onMove);
-  
-  })();
-  
-  
-  /*231-187.5 = 43.5.  43.5 is how much of the car is left showing*/
-  
-  /*
-  The MouseEvent.clientX read-only property provides the horizontal coordinate within the application's client area at which the event occurred (as opposed to the coordinates within the page). For example, clicking in the top-left corner of the client area will always result in a mouse event with a clientX value of 0, regardless of whether the page is scrolled horizontally.
-  */
 
+
+      var imageCon = document.querySelector('#imageCon'),
+          drag = document.querySelector('.image-drag'),
+          left = document.querySelector('.image-left'),
+          dragging = false,
+          min = 0,
+          max = imageCon.offsetWidth;
+
+      function onDown() {
+          dragging = true;
+      }
+
+      function onUp() {
+          dragging = false;
+      }
+
+      function onMove(event) {
+          if (dragging === true) {
+              var x = event.clientX - imageCon.getBoundingClientRect().left;
+              
+              console.log(event.clientX);
+              console.log(imageCon.getBoundingClientRect().left);
+              
+              if (x < min) { 
+                  x = min; 
+              } else if (x > max) { 
+                  x = max - 4; 
+              }
+              drag.style.left = x + 'px';
+              left.style.width = x + 'px';
+          }
+      }
+
+      drag.addEventListener('mousedown', onDown, false);
+      document.body.addEventListener('mouseup', onUp, false);
+      document.body.addEventListener('mousemove', onMove, false);
+
+  })();
 
 })();
-
-

@@ -561,16 +561,6 @@ model-viewer > #ar-prompt > img {
 }
 
 
-#mobile-xray img {
-  display: none;
-}
-
-/* Media query for mobile and tablet screens */
-@media only screen and (max-width: 768px) {
-  #mobile-xray img {
-    display: block;
-  }
-}
 
 
 

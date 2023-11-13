@@ -192,3 +192,28 @@ document.addEventListener('DOMContentLoaded', function () {
   // Listen for scroll events
   window.addEventListener('scroll', checkVisibility);
 });
+
+
+// Add this JavaScript to handle the scroll and apply the class dynamically
+document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("scroll", function () {
+    const infotext = document.querySelector(".infotext");
+    const infotextOffset = infotext.offsetTop;
+    const infotextHeight = infotext.clientHeight;
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    // Check if the infotext section is in the viewport
+    if (
+      scrollPosition > infotextOffset - windowHeight + infotextHeight * 0.5 &&
+      scrollPosition < infotextOffset + infotextHeight - infotextHeight * 0.5
+    ) {
+      infotext.classList.add("show");
+    } else {
+      infotext.classList.remove("show");
+    }
+  });
+});
+
+
+

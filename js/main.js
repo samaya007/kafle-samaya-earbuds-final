@@ -213,3 +213,12 @@ document.addEventListener("DOMContentLoaded", function() {
 })();
 
 
+
+/* Hepl used
+https://www.freecodecamp.org/news/css-only-back-to-top-button/ for scroll button
+https://www.codingnepalweb.com/responsive-navigation-menu-bar-design/ responsive nav
+https://www.youtube.com/watch?v=u4O2GKjgMlg&t=14s scrolling animation fade
+prompt used "optimize the smooth scrolling animation" chat gpt
+promot used "use same code to give same effect to an image" chat gpt
+case scroll animation, x-ray and ar- used class code
+*/
